@@ -16,7 +16,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
       fail-fast: false
       matrix:
         base_variant_name:
-          - lite 
+          - lite
     permissions:
       contents: read
       packages: write
@@ -33,7 +33,7 @@ jobs:
     uses: ./.github/workflows/build-os.yml
     secrets: inherit
     with:
-      name: rpi-forklift-demo
+      name: rpi-uc2
       base_release_name: bookworm
       base_image_variant: ${{ matrix.base_variant_name }}
       base_release_date: 2024-11-19

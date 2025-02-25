@@ -6,8 +6,6 @@ on:
       - 'main'
     tags:
       - 'v*'
-    paths:
-      - '!README.md'
   pull_request:
   merge_group:
   workflow_dispatch:

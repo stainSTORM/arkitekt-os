@@ -54,6 +54,7 @@ if "$build_scripts_root"/docker/install.sh; then
   report_finished "$description"
 else
   panic "$description"
+fi
 
 description="set up Forklift"
 report_starting "$description"

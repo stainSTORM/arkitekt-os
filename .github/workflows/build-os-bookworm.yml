@@ -28,7 +28,7 @@ jobs:
       fail-fast: false
       matrix:
         base_variant_name:
-          - desktop
+          - lite 
     permissions:
       contents: read
       packages: write

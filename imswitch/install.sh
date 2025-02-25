@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/bin/bash -eux
+
+config_files_root=$(dirname "$(realpath "$BASH_SOURCE")")
+
 mkdir -p ~/Downloads
 mkdir -p ~/Desktop
 

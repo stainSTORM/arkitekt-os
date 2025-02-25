@@ -37,7 +37,6 @@ if "$build_scripts_root"/tools/install.sh; then
 else
   panic "$description"
 fi
-fi
 
 description="install ImSwitch"
 report_starting "$description"

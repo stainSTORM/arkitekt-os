@@ -37,6 +37,16 @@ if "$build_scripts_root"/tools/install.sh; then
 else
   panic "$description"
 fi
+fi
+
+description="install ImSwitch"
+report_starting "$description"
+chmod +x "$build_scripts_root"/imswitch/install.sh
+if "$build_scripts_root"/imswitch/install.sh; then
+  report_finished "$description"
+else
+  panic "$description"
+fi
 
 # Note: we must install Docker before we perform Forklift container image loading (which requires
 # either Docker or containerd, which is installed by Docker).
@@ -46,7 +56,6 @@ if "$build_scripts_root"/docker/install.sh; then
   report_finished "$description"
 else
   panic "$description"
-fi
 
 description="set up Forklift"
 report_starting "$description"
@@ -63,13 +72,3 @@ if "$build_scripts_root"/cockpit/install.sh; then
 else
   panic "$description"
 fi
-
-description="install ImSwitch"
-report_starting "$description"
-chmod +x "$build_scripts_root"/imswitch/install.sh
-if "$build_scripts_root"/imswitch/install.sh; then
-  report_finished "$description"
-else
-  panic "$description"
-fi
-

@@ -98,7 +98,6 @@ jobs:
       # RUN OS SETUP SCRIPTS
 
       - name: Download and cache Hik Driver
-        id: download-base
         uses: ethanjli/cached-download-action@v0.1.2
         with:
           url: https://www.hikrobotics.com/en2/source/vision/video/2024/9/3/MVS_STD_V3.0.1_240902.zip

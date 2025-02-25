@@ -3,20 +3,14 @@ name: build-os-bookworm
 on:
   push:
     branches:
-      - 'master'
-      - 'software/beta'
-      - 'software/stable'
+      - 'main'
     tags:
-      - 'software/v*'
+      - 'v*'
     paths:
-      - 'software/**'
-      - '!software/CHANGELOG.md'
+      - '!README.md'
       - '.github/workflows/build-os*.yml'
   pull_request:
-    paths:
-      - 'software/**'
-      - '.github/workflows/build-os*.yml'
-  #merge_group:
+  merge_group:
   workflow_dispatch:
     inputs:
       git-ref:

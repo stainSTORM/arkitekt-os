@@ -3,7 +3,11 @@ mkdir -p ~/Downloads
 mkdir -p ~/Desktop
 
 cd ~/Downloads
-git clone https://github.com/openUC2/ImSwitchDockerInstall
+
+installer_repo="$(cat "$config_files_root/installer-repo")"
+installer_version="$(cat "$config_files_root/installer-version")"
+git clone "https://$installer_repo" ImSwitchDockerInstall --no-checkout --filter=blob:none
+git checkout --quiet "$installer_version"
 cd ImSwitchDockerInstall
 
 # install requirements

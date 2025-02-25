@@ -97,6 +97,13 @@ jobs:
 
       # RUN OS SETUP SCRIPTS
 
+      - name: Download and cache Hik Driver
+        id: download-base
+        uses: ethanjli/cached-download-action@v0.1.2
+        with:
+          url: https://www.hikrobotics.com/en2/source/vision/video/2024/9/3/MVS_STD_V3.0.1_240902.zip
+          destination: /tmp/MVS_STD_V3.0.1_240902.zip
+
       # Note: the following step isn't strictly necessary, but it's nice to separate the GitHub
       # Actions log outputs for setting up pinspawn-action for the first time from the logs for
       # the OS installation script

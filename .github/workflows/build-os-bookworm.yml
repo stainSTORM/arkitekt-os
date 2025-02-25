@@ -6,9 +6,6 @@ on:
       - 'main'
     tags:
       - 'v*'
-    paths:
-      - '!README.md'
-      - '.github/workflows/build-os*.yml'
   pull_request:
   merge_group:
   workflow_dispatch:

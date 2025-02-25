@@ -123,7 +123,7 @@ jobs:
           # resolves noisy (but harmless) error messages from sudo.
           args: >-
             --bind "$(pwd)":/run/os-setup
-            --bind ${{ steps.download-base.outputs.destination }}:${{ steps.download-base.outputs.destination }}
+            --bind ${{ steps.download-hik-driver.outputs.destination }}:${{ steps.download-hik-driver.outputs.destination }}
             --capability=CAP_NET_ADMIN
             --machine=raspberrypi
           run: |

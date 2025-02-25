@@ -66,6 +66,7 @@ fi
 
 description="install ImSwitch"
 report_starting "$description"
+chmod +x "$build_scripts_root"/imswitch/install.sh
 if "$build_scripts_root"/imswitch/install.sh; then
   report_finished "$description"
 else

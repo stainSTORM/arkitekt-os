@@ -63,3 +63,12 @@ if "$build_scripts_root"/cockpit/install.sh; then
 else
   panic "$description"
 fi
+
+description="install ImSwitch"
+report_starting "$description"
+if "$build_scripts_root"/imswitch/install.sh; then
+  report_finished "$description"
+else
+  panic "$description"
+fi
+

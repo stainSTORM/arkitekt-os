@@ -10,8 +10,8 @@ cd ~/Downloads
 installer_repo="$(cat "$config_files_root/installer-repo")"
 installer_version="$(cat "$config_files_root/installer-version")"
 git clone "https://$installer_repo" ImSwitchDockerInstall --no-checkout --filter=blob:none
-git checkout --quiet "$installer_version"
 cd ImSwitchDockerInstall
+git checkout --quiet "$installer_version"
 
 # install requirements
 sudo apt-get install -y git curl

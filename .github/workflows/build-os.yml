@@ -98,6 +98,7 @@ jobs:
       # RUN OS SETUP SCRIPTS
 
       - name: Download and cache Hik Driver
+        id: download-hik-driver
         uses: ethanjli/cached-download-action@v0.1.2
         with:
           url: https://www.hikrobotics.com/en2/source/vision/video/2024/9/3/MVS_STD_V3.0.1_240902.zip
@@ -122,6 +123,7 @@ jobs:
           # resolves noisy (but harmless) error messages from sudo.
           args: >-
             --bind "$(pwd)":/run/os-setup
+            --bind ${{ steps.download-base.outputs.destination }}:${{ steps.download-base.outputs.destination }}
             --capability=CAP_NET_ADMIN
             --machine=raspberrypi
           run: |

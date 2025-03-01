@@ -38,6 +38,23 @@ else
   panic "$description"
 fi
 
+description="configure system locales"
+report_starting "$description"
+if "$build_scripts_root"/localization/config.sh; then
+  source "$build_scripts_root"/localization/export-env.sh
+  report_finished "$description"
+else
+  panic "$description"
+fi
+
+description="configure networking"
+report_starting "$description"
+if "$build_scripts_root"/networking/install.sh; then
+  report_finished "$description"
+else
+  panic "$description"
+fi
+
 description="install ImSwitch"
 report_starting "$description"
 if "$build_scripts_root"/imswitch/install.sh; then

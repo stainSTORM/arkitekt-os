@@ -28,9 +28,6 @@ echo "Install Daheng Driver"
 echo "Install Vimba Driver"
 ./install_vimba.sh
 
-echo "Setup RaspAp"
-./install_raspap.sh
-
 echo "Create Desktop Icons"
 ./create_desktopicons.sh
 

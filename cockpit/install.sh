@@ -6,10 +6,10 @@ sudo -E apt-get install -y --no-install-recommends -o Dpkg::Progress-Fancy=0 \
   cockpit cockpit-networkmanager cockpit-storaged
 
 # install cockpit-navigator
-sudo wget -O cockpit-navigator_0.5.10-1focal_all.deb https://github.com/45Drives/cockpit-navigator/releases/download/v0.5.10/cockpit-navigator_0.5.10-1focal_all.deb
+wget -O /tmp/cockpit-navigator.deb https://github.com/45Drives/cockpit-navigator/releases/download/v0.5.10/cockpit-navigator_0.5.10-1focal_all.deb
 ls
-sudo apt-get install -y ./cockpit-navigator_0.5.10-1focal_all.deb
-rm ./cockpit-navigator_0.5.10-1focal_all.deb
+sudo apt-get install -y /tmp/cockpit-navigator.deb
+rm /tmp/cockpit-navigator.deb
 
 # Add a minimal Cockpit package for IMSwitch
 sudo mkdir -p /usr/share/cockpit/imswitch

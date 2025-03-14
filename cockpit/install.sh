@@ -35,7 +35,7 @@ cat << 'EOF' | sudo tee /usr/share/cockpit/imswitch/index.html > /dev/null
   <title>IMSwitch</title>
 </head>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <a href="https://localhost:8001/imswitch/index.html?" target="_blank">
+  <a href="https://192.168.4.1:8001/imswitch/index.html?" target="_blank">
     Open IMSwitch
   </a>
 </body>

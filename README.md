@@ -1,6 +1,11 @@
 # rpi-os-demo
 Demo OS images with Forklift integration layered over Raspberry Pi OS
 
+
+## Pallet
+
+We use the following pallet: https://github.com/openUC2/pallet
+
 ## Usage
 
 The entrypoint for the OS setup process is [`setup.sh`](./setup.sh). To add more steps to the OS

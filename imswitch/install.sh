@@ -31,8 +31,8 @@ echo "Install Vimba Driver"
 echo "Create Desktop Icons"
 ./create_desktopicons.sh
 
-echo "Set install_autostart for ImSwitch"
-./install_autostart.sh
+# echo "Set install_autostart for ImSwitch"
+# ./install_autostart.sh
 
 # add serial devices to user group
 sudo usermod -a -G dialout "$USER"

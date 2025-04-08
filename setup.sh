@@ -90,3 +90,11 @@ if "$build_scripts_root"/cockpit/install.sh; then
 else
   panic "$description"
 fi
+
+description="install base OS"
+report_starting "$description"
+if "$build_scripts_root"/base-os/install.sh; then
+  report_finished "$description"
+else
+  panic "$description"
+fi

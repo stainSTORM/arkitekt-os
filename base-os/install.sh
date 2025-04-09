@@ -41,11 +41,6 @@ sudo raspi-config nonint do_legacy 1
 
 
 
-'''This is an attempt to automount USB drives on Linux using udev rules and systemd-run.
-This script will create a mount point in /media for each USB drive and mount it automatically when inserted.
-It will also unmount the drive when removed. The script uses udev rules to trigger the mount and unmount scripts.
-'''
-
 # Optional: Install filesystem packages for NTFS/exFAT
 sudo apt install -y ntfs-3g exfat-fuse exfatprogs
 

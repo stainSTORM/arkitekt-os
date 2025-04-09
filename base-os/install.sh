@@ -110,8 +110,15 @@ SUBSYSTEM=="block", KERNEL=="sd[a-z][0-9]*", ACTION=="remove", RUN+="/usr/bin/sy
 EOF
 
 # 4) Reload udev so the new rules are active
-sudo udevadm control --reload-rules
-sudo udevadm trigger
+if command -v udevadm &> /dev/null; then
+    # This comment is in English
+    echo "Reloading udev rules"
+    sudo udevadm control --reload-rules
+    sudo udevadm trigger
+else
+    # This comment is in English
+    echo "udevadm not found, skipping reload."
+fi
 
 echo "===================================="
 echo "Automount installed."

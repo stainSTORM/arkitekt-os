@@ -109,18 +109,8 @@ SUBSYSTEM=="block", KERNEL=="sd[a-z][0-9]*", ACTION=="add", ENV{ID_FS_TYPE}=="?*
 SUBSYSTEM=="block", KERNEL=="sd[a-z][0-9]*", ACTION=="remove", RUN+="/usr/bin/systemd-run --no-block /usr/local/bin/autounmount.sh %k"
 EOF
 
-# 4) Reload udev so the new rules are active
-if command -v udevadm &> /dev/null; then
-    # This comment is in English
-    echo "Reloading udev rules"
-    sudo udevadm control --reload-rules
-    sudo udevadm trigger
-else
-    # This comment is in English
-    echo "udevadm not found, skipping reload."
-fi
 
 echo "===================================="
 echo "Automount installed."
-echo "Insert a USB stick. It should mount under /media/sdXY (e.g. /media/sda1)."
+echo "We should be able to Insert a USB stick. It should mount under /media/sdXY (e.g. /media/sda1)."
 echo "Check logs via:  journalctl -t AUTOMOUNT -f"

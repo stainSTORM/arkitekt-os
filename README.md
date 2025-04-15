@@ -1,6 +1,5 @@
-# rpi-os-demo
-Demo OS images with Forklift integration layered over Raspberry Pi OS
-
+# imswitch-os
+An embedded operating system for using imswitch on Raspberry Pi devices.
 
 ## Pallet
 

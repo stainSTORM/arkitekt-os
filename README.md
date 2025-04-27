@@ -1,10 +1,10 @@
-# imswitch-os
-An embedded operating system for using imswitch on Raspberry Pi devices.
+# arkitekt-os
+An embedded operating system for using arkitekt clients on Raspberry Pi devices.
 
 ## Pallet
 
 This OS image deploys the following pallet:
-[github.com/openUC2/pallet](https://github.com/openUC2/pallet)
+[github.com/stainstorm/pallet](https://github.com/stainstorm/pallet)
 
 ## Development
 

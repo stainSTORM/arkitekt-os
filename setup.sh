@@ -65,9 +65,9 @@ else
   panic "$description"
 fi
 
-description="install ImSwitch"
+description="install arkitekt"
 report_starting "$description"
-if "$build_scripts_root"/imswitch/install.sh; then
+if "$build_scripts_root"/arkitekt/install.sh; then
   report_finished "$description"
 else
   panic "$description"

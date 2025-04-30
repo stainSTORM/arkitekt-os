@@ -23,8 +23,7 @@ conda clean --all -f -y
 echo "Cloning Arkitekt APP"
 git clone https://github.com/arkitektio-apps/dornado ~/dornado
 cd ~/dornado
-git checkout master
 # install dependencies
-source /opt/conda/bin/activate arkitekt && pip install requests numpy arkitekt-next
+source /opt/conda/bin/activate arkitekt && pip  arkitekt-next
 # TODO: Register as a service on boot
 #source /opt/conda/bin/activate arkitekt && pip install -e ~/ImSwitch

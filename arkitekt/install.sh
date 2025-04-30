@@ -14,8 +14,10 @@ export PATH=/opt/conda/bin:$PATH
 # Create conda environment and install packages
 echo "Creating conda environment and installing packages"
 conda create -y --name arkitekt python=3.11
-conda install -n arkitekt -y
+# Comment in English: install requests and numpy after creating the environment
+conda install -n arkitekt -y requests numpy
 conda clean --all -f -y
+
 
 # Clone the config folder
 echo "Cloning Arkitekt APP"

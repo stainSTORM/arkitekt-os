@@ -23,6 +23,8 @@ conda clean --all -f -y
 echo "Cloning Arkitekt APP"
 git clone https://github.com/arkitektio-apps/dornado ~/dornado
 cd ~/dornado
+git clone https://github.com/dorna-robotics/dorna2-python
+mv dorna2-python/dorna2* dorna2
 # install dependencies
 source /opt/conda/bin/activate arkitekt && pip install arkitekt-next rekuest-next
 # TODO: Register as a service on boot

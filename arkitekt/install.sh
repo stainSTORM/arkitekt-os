@@ -24,6 +24,16 @@ echo "Cloning Arkitekt APP"
 git clone https://github.com/arkitektio-apps/dornado ~/dornado
 cd ~/dornado
 # install dependencies
-source /opt/conda/bin/activate arkitekt && pip install arkitekt-next
+source /opt/conda/bin/activate arkitekt && pip install arkitekt-next rekuest-next
 # TODO: Register as a service on boot
 #source /opt/conda/bin/activate arkitekt && pip install -e ~/ImSwitch
+
+
+# Activate environment and make it persistent in ~/.bashrc
+echo "Adding environment activation to ~/.bashrc"
+if ! grep -Fxq "source /opt/conda/bin/activate arkitekt" ~/.bashrc; then
+    echo "source /opt/conda/bin/activate arkitekt" >> ~/.bashrc
+    echo "Environment activation added to ~/.bashrc"
+else
+    echo "Environment activation already exists in ~/.bashrc"
+fi

@@ -19,12 +19,19 @@ conda install -n arkitekt -y requests numpy
 conda clean --all -f -y
 
 
-# Clone the config folder
-echo "Cloning Arkitekt APP"
+# Clone the dornado folder 
+echo "Cloning Arkitekt APP (dornado)"
 git clone https://github.com/stainSTORM/dornado/ ~/dornado
 cd ~/dornado
 # install dependencies
 source /opt/conda/bin/activate arkitekt && pip install arkitekt-next rekuest-next
+# TODO: Register as a service on boot
+#source /opt/conda/bin/activate arkitekt && pip install -e ~/ImSwitch
+
+# cloning the ot2 folder 
+echo "Cloning Arkitekt APP (ot2)"
+git clone https://github.com/stainSTORM/OT2windy ~/OT2windy
+cd ~/OT2windy
 # TODO: Register as a service on boot
 #source /opt/conda/bin/activate arkitekt && pip install -e ~/ImSwitch
 
